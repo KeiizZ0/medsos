@@ -1,0 +1,28 @@
+
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ideas_db
+    username: postgres # Ganti dengan username database Anda
+    password: HJkyai2020 # Ganti dengan password database Anda
+  jpa:
+    hibernate:
+      ddl-auto: update # 'update' lebih aman untuk pengembangan daripada 'create-drop'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        formatsql: true
+    show-sql: true 
+    logging:
+      level:
+        org.springframework.security: DEBUG
+        
+
+
+# Properti Kustom Aplikasi
